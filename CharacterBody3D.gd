@@ -4,7 +4,7 @@ extends CharacterBody3D
 const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 
-var bullet_scene = preload("res://bullet.tscn")
+var bullet_scene = preload("res://prefabs/bullet.tscn")
 var bullet_speed = 5.0
 
 var mouseDown = false

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bspv54qr8603i"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_b2n8v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ey0i1"]
+size = Vector3(0.5, 1, 0.5)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7no3g"]
+radius = 0.225
+height = 1.0
+rings = 1
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.0399477, 0)
+collision_mask = 3
+script = ExtResource("1_b2n8v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_ey0i1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50903, 0)
+mesh = SubResource("CapsuleMesh_7no3g")
